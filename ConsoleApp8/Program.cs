@@ -9,6 +9,7 @@ namespace ConsoleApp8
         Developer,
         Secretary,
         DBA,
+        SecurityOfficer
     }
     
 
@@ -37,8 +38,30 @@ namespace ConsoleApp8
         {
             return "ID: " + ID + " Name: " + Name + " Gender: " + Gender + " Salary: " + Salary.ToString("C") + " Security Level: " + Security;
         }
-        #endregion
+        
     }
+    #endregion
+
+    #region Q2
+    class HiringDate
+    {
+        public int Day;
+        public int Month;
+        public int Year;
+
+        public HiringDate(int d, int m, int y)
+        {
+            Day = d;
+            Month = m;
+            Year = y;
+        }
+
+        public string GetDate()
+        {
+            return Day + "/" + Month + "/" + Year;
+        }
+    }
+    #endregion
     internal class Program
     {
         static void Main(string[] args)
